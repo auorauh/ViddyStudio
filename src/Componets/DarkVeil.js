@@ -86,7 +86,7 @@ void main(){
 `;
 
 export default function DarkVeil({
-  hueShift = 55,
+  hueShift = 44,
   noiseIntensity = 0.1,
   scanlineIntensity = 0,
   speed = 0.5,
