@@ -1,38 +1,274 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  overflow-x: hidden;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.HeaderBlurWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1); /* translucent background */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  z-index: 1;
+}
+.Header {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: transparent;
+}
+.Logo {
+  height: 5rem;
+}
+.HeaderLinks {
+  display: flex;
+  gap: 1rem;
+  margin-right: 5rem;
+  display: flex;
+  align-items: center;
+}
+.AppBtn {
+  background-color: #fed232;
+  color: black;
+  padding: .5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+.LandingContainer {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.25;
+}
+.Landing {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  font-size: 10rem;
+  margin: 0;
+}
+h2{
+  font-size: 3rem;
+  margin: 0;
+}
+.tryBtn {
+  background-color: #fed232;
+  width: 15rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  color: black;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.second {
+  height: 100vh;
+  width: 100%;
+}
+.videoContainer {
+  width: 90%;
+  height: 100%;
+}
+.About {
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 80%;
+  height: 100vh;
+}
+p {
+  margin: 0;
+}
+.AboutColumns {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  margin-top: 75px;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.AboutCol {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 80%;
+  padding: 5rem 0;
+}
+.AboutIcon {
+  font-size: 8rem;
+  align-self: center;
+}
+.StickyScroll {
+  overflow: visible;
+  position: relative;
+}
+.Testimonials {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.TestHeader {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 8rem;
+}
+.TestColumns {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.TestColumn {
+  width: 30%;
+  text-align: center;
+}
+.TestImg {
+  height: 25rem;
+  width: auto;
+}
+.TestName {
+  font-size: 3.5rem;
+}
+.TestTitle {
+  font-size: 2.5rem;
+}
+.Pitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0 5%;
+  font-size: 3rem;
+}
+.Pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 80vh;
+}
+.Pricing h3 {
+  justify-self: flex-start;
+  font-size: 10rem;
+  margin: 2rem;
+}
+.PricingCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.PriceCard {
+  height: 20rem;
+  width: 20rem;
+  background-color: #fed232;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+.PriceCard2 {
+  height: 25rem;
+}
+.PriceTitle {
+  align-self: flex-start;
+}
+.Price {
+  align-self: flex-start;
+  font-size: 3rem;
+}
+.Features {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.PricingBtn {
+  background-color: black;
+  color: white;
+  height: 2.5rem;
+  border-radius: 25px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  margin: 0 2rem;
+}
+.FooterRight {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+.glow-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  background: black;
+  overflow: hidden;
+  transform: rotate(-90deg);
+  z-index: -1;
+}
+.glow-layer {
+  position: absolute;
+  bottom: 0;
+  width: 120%;
+  height: 150%;
+  background: radial-gradient(circle at 30% 50%, #faa307, transparent 40%),
+              radial-gradient(circle at 70% 60%, #f48c06, transparent 40%),
+              radial-gradient(circle at 50% 80%, #fed232, transparent 30%);
+  filter: blur(120px);
+  opacity: 0.7;
+  animation: floatGlow 12s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(-10%, 5%) scale(1); }
+  100% { transform: translate(10%, -5%) scale(1.1); }
+}
+
+@media screen and (min-width: 1024px) {
+  .sticky-card {
+    display: block !important;
   }
 }
+
+
+
