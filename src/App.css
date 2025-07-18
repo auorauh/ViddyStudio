@@ -235,7 +235,13 @@ p {
   padding-right: 2rem;
 }
 
-
+.Veil {
+    position: fixed;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
 .glow-background {
   position: fixed;
   width: 100vw;

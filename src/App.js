@@ -9,12 +9,16 @@ import { RxCheckCircled } from "react-icons/rx";
 import testimonial1 from './Assets/testimonial1.png';
 import testimonial2 from './Assets/testimonial2.png';
 import testimonial3 from './Assets/testimonial3.png';
+import DarkVeil from './Componets/DarkVeil';
 
 function App() {
   return (
     <div className="App">
-      <div class="glow-background">
+      {/* <div class="glow-background">
         <div class="glow-layer"></div>
+      </div> */}
+      <div className="Veil">
+        <DarkVeil/>
       </div>
       <div className="HeaderBlurWrapper">
         <div className="Header">
@@ -29,7 +33,7 @@ function App() {
       </div>
       <div className="LandingContainer">
         <div className="Landing">
-          <h1>MAKE VIDEOS THAT MATTER</h1>
+          <h1>Plan smarter, shoot better, and make videos that matter.</h1>
           <h2>Where simplicity meets structure and your message gets remembered.</h2>
           <div className="tryBtn">Try For Free</div>
         </div>
