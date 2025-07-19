@@ -1,8 +1,23 @@
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('./Assets/Fonts/HelveticaNowDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  
+}
+a {
+  all: unset;
+  cursor: pointer; /* optional: keeps it clickable */
+}
 .App {
+  font-family: 'HelveticaNowDisplay';
   text-align: center;
   width: 100vw;
+  height: 100%;
   overflow-x: hidden;
   color: white;
+  letter-spacing: 0.05em;
 }
 .HeaderBlurWrapper {
   position: fixed;
@@ -27,10 +42,15 @@
 .Logo {
   height: 5rem;
 }
+.LeftHeader {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5rem;
+}
 .HeaderLinks {
   display: flex;
   gap: 1rem;
-  margin-right: 5rem;
+  margin-right: 1rem;
   display: flex;
   align-items: center;
 }
@@ -51,6 +71,7 @@
   line-height: 1.25;
 }
 .Landing {
+  width: 100%;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -58,8 +79,8 @@
   align-items: center;
 }
 h1{
-  font-size: 10rem;
-  margin: 0 5%;
+  font-size: 8rem;
+  margin: 0 15px;
 }
 h2{
   font-size: 3rem;
@@ -118,10 +139,62 @@ p {
 .AboutIcon {
   font-size: 8rem;
   align-self: center;
+  margin: 1rem;
 }
-.StickyScroll {
-  overflow: visible;
+.HowSection {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LaptopImageContainer {
   position: relative;
+  width: 50%;
+  height: 100%;
+  margin-bottom: 4rem;
+}
+
+.LaptopImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.LaptopImage.active {
+  opacity: 1;
+}
+.HowCards {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.HowCard {
+  width: 50%;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: white;
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+.HowCard.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.HowTitle {
+  font-size: 3rem;
+  font-weight: bold;
 }
 .Testimonials {
   height: 100vh;
@@ -151,7 +224,7 @@ p {
   padding: 3rem;
 }
 .TestImg {
-  height: 20rem;
+  height: 15rem;
   width: auto;
 }
 .TestName {
@@ -320,6 +393,43 @@ p {
   h2 {
     font-size: 2rem;
   }
+  .HowSection {
+  height: 80vh;
+  flex-direction: column-reverse;
+  margin: 10% 0;
+}
+.LaptopImageContainer {
+  height: 20rem;
+  width: 100%;
+  margin: 0;
+}
+.HowCards {
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+.HowCard {
+  width: 80%;
+  height: 20vh;
+  display: none;
+}
+.HowCard.active {
+  display: block;
+}
+.Testimonials {
+  height: 100%;
+  margin-bottom: 20%;
+}
+.TestColumns {
+  flex-direction: column;
+  padding: 0 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.TestColumn {
+  width: 70%;
+}
 }
 @media (max-width: 599px) {
   /* Styles for small screens */
@@ -329,6 +439,14 @@ p {
   }
   .HeaderLinks {
     display: none;
+  }
+  .LeftHeader {
+    margin: 0;
+  }
+  .AppBtn {
+    padding: .5rem;
+    font-size: 1.25rem;
+    margin-right: 1rem;
   }
   .Logo {
     height: 3rem;
@@ -352,22 +470,44 @@ p {
   }
   .About {
     height: 100%;
-    font-size: 2rem;
+    width: 100%;
+    font-size: 1.8rem;
   }
   .AboutColumns {
   flex-direction: column;
   font-size: 1.5rem;
-  margin-top: 0rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 0 3rem;
 }
 .AboutCol {
   width: 100%;
   padding: 1rem 0;
   font-size: 1rem;
 }
-.StickyScroll {
-  height: 100%;
+.HowSection {
+  height: 70vh;
+  flex-direction: column-reverse;
+  margin: 20% 0;
+}
+.LaptopImageContainer {
+  height: 20rem;
+  width: 100%;
+  margin: 0;
+}
+.HowCards {
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+.HowCard {
+  width: 80%;
+  height: 20vh;
+  display: none;
+}
+.HowCard.active {
+  display: block;
 }
 .Testimonials {
   height: 100%;
@@ -396,7 +536,7 @@ p {
   font-size: 1.5rem;
 }
 .Pitch{
-  height: 100vh;
+  height: 80vh;
   font-size: 2rem;
 }
 .Pricing {
@@ -407,6 +547,20 @@ p {
 }
 .PricingCards {
   flex-direction: column;
+}
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  font-size: 1.25rem;
+  margin: 0 1rem;
+}
+.FooterRight {
+  display: flex;
+  gap: 2rem;
+  font-size: .75rem;
+  padding-right: 0rem;
 }
 }
 

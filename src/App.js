@@ -1,10 +1,9 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import whiteLogo from './Assets/Artboard 11_1.png';
 import { GiVideoCamera } from "react-icons/gi";
-import { TbTargetArrow } from "react-icons/tb";
-import { LuRocket } from "react-icons/lu";
-import { StickyScroll } from './Componets/StickyScroll';
+import { BsPersonBoundingBox } from "react-icons/bs";
+import { FaComputer } from "react-icons/fa6";
 import { howItWorksData } from './Assets/howItWorks';
 import { RxCheckCircled } from "react-icons/rx";
 import testimonial1 from './Assets/testimonial1.png';
@@ -13,9 +12,16 @@ import testimonial3 from './Assets/testimonial3.png';
 import DarkVeil from './Componets/DarkVeil';
 
 function App() {
-    const [pricingBoolean, setPricingBoolean] = useState(false);
+  const [pricingBoolean, setPricingBoolean] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const pricingToggle = () => setPricingBoolean(prev => !prev);
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % howItWorksData.length);
+  }, 4000);
+  return () => clearInterval(interval);
+}, []);
   return (
     <div className="App">
       {/* <div class="glow-background">
@@ -26,12 +32,14 @@ function App() {
       </div>
       <div className="HeaderBlurWrapper">
         <div className="Header">
-          <img className="Logo" src={whiteLogo} />
+          <img alt="Viddy Logo" className="Logo" src={whiteLogo} />
+          <div className="LeftHeader">
           <div className="HeaderLinks">
-            <div>ABOUT</div>
-            <div>HOW IT WORKS</div>
-            <div>PRICING</div>
-            <b className="AppBtn">Go To App</b>
+            <a href="#About">ABOUT</a>
+            <a href="#How">HOW IT WORKS</a>
+            <a href="#Pricing">PRICING</a>
+          </div>
+          <b className="AppBtn">Go To App</b>
           </div>
         </div>
       </div>
@@ -45,36 +53,58 @@ function App() {
           <iframe className='videoContainer' src="https://www.youtube.com/embed/bJFOu1HCmho?si=WsXXAS_sE-UvojpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
-      <div className="About">
+      <div className="About" id="About">
             <b>You don’t need a new camera.</b>
             <p>You need a better process.</p>
             <div className="AboutColumns">
               <p className="AboutCol"><b>Videograher</b><GiVideoCamera className="AboutIcon"/>As a freelance videographer, everything changed when I stopped reacting and started directing. I went from just a camera guy to running a production company, managing clients, and leading a confident team.</p>
-              <p className="AboutCol"><b>Talent</b><TbTargetArrow className="AboutIcon"/>Everything shifted when I focused more on planning and built a clear, repeatable process. I moved away from messy shoot days and rigid storyboards to a writing-first approach that prioritized the message and made filming scripted videos easier.</p>
-              <p className="AboutCol"><b>Editor</b><LuRocket className="AboutIcon"/>With that system in place, I was able to lead clients more effectively, increase my value, and deliver high-quality videos consistently. That led to the creation of Viddy Studio, a place where that process helps others do the same.</p>
+              <p className="AboutCol"><b>Talent</b><BsPersonBoundingBox className="AboutIcon"/>Everything shifted when I focused more on planning and built a clear, repeatable process. I moved away from messy shoot days and rigid storyboards to a writing-first approach that prioritized the message and made filming scripted videos easier.</p>
+              <p className="AboutCol"><b>Editor</b><FaComputer className="AboutIcon"/>With that system in place, I was able to lead clients more effectively, increase my value, and deliver high-quality videos consistently. That led to the creation of Viddy Studio, a place where that process helps others do the same.</p>
             </div>
             
       </div>
-      <div className="StickyScroll">
-        <StickyScroll content={howItWorksData}/>
+      <div className="HowSection" id="How">
+        <div className="HowCards">
+          {howItWorksData.map((item, index) => (
+            <div
+              key={index}
+              className={`HowCard ${index === activeIndex ? "active" : "inactive"}`}
+            >
+              {/* <div>{item.content}</div> */}
+              <div className="HowTitle">{item.title}</div>
+              <div>{item.description}</div>
+            </div>
+          ))}
+        </div>
+        <div className="LaptopImageContainer">
+          {howItWorksData.map((item, index) => (
+            <img
+              key={index}
+              src={item.image}
+              alt={item.title}
+              className={`LaptopImage ${index === activeIndex ? "active" : ""}`}
+            />
+          ))}
+        </div>
       </div>
+
       <div className="Testimonials">
         <div className="TestHeader">What Our Creators Say</div>
         <div className="TestColumns">
           <div className="TestColumn">
-            <img src={testimonial1} className="TestImg"/>
+            <img alt="Testimonial User1" src={testimonial1} className="TestImg"/>
             <div className="TestName">TRENTON TEASDALE</div>
             <div className="TestTitle">Content Creator</div>
             <div>"Viddy Studio has been such an amazing tool. From planning to shooting to editing. It allows me to focus on other creative aspects of my projects."</div>
           </div>
           <div className="TestColumn">
-            <img src={testimonial2} className="TestImg"/>
+            <img alt="Testimonial User2" src={testimonial2} className="TestImg"/>
             <div className="TestName">JAXON CUMMINGS</div>
             <div className="TestTitle">CEO, Your Life Legacy</div>
             <div>"I just made ads using Viddy Studio and it made everything so seamless and easy. I'm horrible on camera and they just made it seamless and so much better."</div>
           </div>
           <div className="TestColumn">
-            <img src={testimonial3} className="TestImg"/>
+            <img alt="Testimonial User3" src={testimonial3} className="TestImg"/>
             <div className="TestName">JAKE LOVELAND</div>
             <div className="TestTitle">CEO, Your Life Legacy</div>
             <div >Papa Bird Studios</div>
@@ -86,7 +116,7 @@ function App() {
         <div>All of the fanciest edits and tactics won’t mean anything if you don’t capture a great story and delivery in the first place. Viddy Studio brings the message and story to the forefront of our process. </div>
         <h3>If you’re ready to stop dreaming and start building, try Viddy Studio.</h3>
       </div>
-      <div className="Pricing"> 
+      <div className="Pricing" id="Pricing"> 
         <h3>Pricing</h3>
         <div className="PricingToggle">
         Monthly
