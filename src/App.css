@@ -51,7 +51,7 @@
   line-height: 1.25;
 }
 .Landing {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,11 +59,11 @@
 }
 h1{
   font-size: 10rem;
-  margin: 0;
+  margin: 0 5%;
 }
 h2{
   font-size: 3rem;
-  margin: 0;
+  margin: 0 10%;
 }
 .tryBtn {
   background-color: #fed232;
@@ -83,11 +83,11 @@ h2{
   width: 100%;
 }
 .videoContainer {
-  width: 90%;
-  height: 100%;
+  width: 70%;
+  height: 90%;
 }
 .About {
-  font-size: 8rem;
+  font-size: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +103,7 @@ p {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
-  margin-top: 75px;
+  margin-top: 10rem;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -140,21 +140,26 @@ p {
 .TestColumns {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  gap: 5rem;
 }
 .TestColumn {
-  width: 30%;
+  width: 22%;
   text-align: center;
+  background-color: rgba(15, 15, 15, 0.5);
+  border-radius: 25px;
+  padding: 3rem;
 }
 .TestImg {
-  height: 25rem;
+  height: 20rem;
   width: auto;
 }
 .TestName {
-  font-size: 3.5rem;
+  font-size: 3rem;
+  font-weight: 900;
 }
 .TestTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .Pitch {
   display: flex;
@@ -170,13 +175,43 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: white;
   height: 80vh;
 }
 .Pricing h3 {
   justify-self: flex-start;
   font-size: 10rem;
   margin: 2rem;
+}
+.PricingToggle {
+  display: flex;
+  gap: 1rem;
+}
+.toggle-switch {
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.toggle-switch.on {
+  background-color: #4ade80; /* Green */
+}
+.toggle-thumb {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+.toggle-switch.on .toggle-thumb {
+  left: 26px;
 }
 .PricingCards {
   display: flex;
@@ -187,7 +222,8 @@ p {
 .PriceCard {
   height: 20rem;
   width: 20rem;
-  background-color: #fed232;
+  background-color: rgba(15, 15, 15, 0.5);
+  color: white;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -238,9 +274,10 @@ p {
 .Veil {
     position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
+  background-color: black;
 }
 .glow-background {
   position: fixed;
@@ -276,5 +313,101 @@ p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 599px) {
+  /* Styles for small screens */
+  .Header {
+    width: 100%;
+    height: 4rem;
+  }
+  .HeaderLinks {
+    display: none;
+  }
+  .Logo {
+    height: 3rem;
+  }
+    h1 {
+    font-size: 3.5rem;
+    margin: 0 5%;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .second {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .videoContainer {
+    height: 70%;
+    width: 90%;
+  }
+  .About {
+    height: 100%;
+    font-size: 2rem;
+  }
+  .AboutColumns {
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+.AboutCol {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+.StickyScroll {
+  height: 100%;
+}
+.Testimonials {
+  height: 100%;
+}
+.TestHeader {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.TestColumns {
+  flex-direction: column;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+.TestColumn {
+  width: 90%;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+}
+.TestImg {
+  height: 10rem;
+}
+.TestName {
+  font-size: 2rem;
+}
+.TestTitle {
+  font-size: 1.5rem;
+}
+.Pitch{
+  height: 100vh;
+  font-size: 2rem;
+}
+.Pricing {
+  height: 100%;
+}
+.Pricing h3 {
+  font-size: 5rem;
+}
+.PricingCards {
+  flex-direction: column;
+}
+}
 
 

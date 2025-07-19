@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 import whiteLogo from './Assets/Artboard 11_1.png';
 import { GiVideoCamera } from "react-icons/gi";
 import { TbTargetArrow } from "react-icons/tb";
@@ -12,6 +13,9 @@ import testimonial3 from './Assets/testimonial3.png';
 import DarkVeil from './Componets/DarkVeil';
 
 function App() {
+    const [pricingBoolean, setPricingBoolean] = useState(false);
+
+  const pricingToggle = () => setPricingBoolean(prev => !prev);
   return (
     <div className="App">
       {/* <div class="glow-background">
@@ -33,21 +37,21 @@ function App() {
       </div>
       <div className="LandingContainer">
         <div className="Landing">
-          <h1>Plan smarter, shoot better, and make videos that matter.</h1>
-          <h2>Where simplicity meets structure and your message gets remembered.</h2>
+          <h1>MAKE VIDEOS THAT MATTER</h1>
+          <h2>Content creation made simple and designed for small teams</h2>
           <div className="tryBtn">Try For Free</div>
         </div>
         <div className="second">
-          <iframe className='videoContainer' src="https://www.youtube.com/embed/M_h9W8EYyPY?si=zByOR3j_dWwZ_bpz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe className='videoContainer' src="https://www.youtube.com/embed/bJFOu1HCmho?si=WsXXAS_sE-UvojpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
       <div className="About">
             <b>You don’t need a new camera.</b>
             <p>You need a better process.</p>
             <div className="AboutColumns">
-              <p className="AboutCol"><GiVideoCamera className="AboutIcon"/>As a freelance videographer, everything changed when I stopped reacting and started directing. I went from just a camera guy to running a production company, managing clients, and leading a confident team.</p>
-              <p className="AboutCol"><TbTargetArrow className="AboutIcon"/>Everything shifted when I focused more on planning and built a clear, repeatable process. I moved away from messy shoot days and rigid storyboards to a writing-first approach that prioritized the message and made filming scripted videos easier.</p>
-              <p className="AboutCol"><LuRocket className="AboutIcon"/>With that system in place, I was able to lead clients more effectively, increase my value, and deliver high-quality videos consistently. That led to the creation of Viddy Studio, a place where that process helps others do the same.</p>
+              <p className="AboutCol"><b>Videograher</b><GiVideoCamera className="AboutIcon"/>As a freelance videographer, everything changed when I stopped reacting and started directing. I went from just a camera guy to running a production company, managing clients, and leading a confident team.</p>
+              <p className="AboutCol"><b>Talent</b><TbTargetArrow className="AboutIcon"/>Everything shifted when I focused more on planning and built a clear, repeatable process. I moved away from messy shoot days and rigid storyboards to a writing-first approach that prioritized the message and made filming scripted videos easier.</p>
+              <p className="AboutCol"><b>Editor</b><LuRocket className="AboutIcon"/>With that system in place, I was able to lead clients more effectively, increase my value, and deliver high-quality videos consistently. That led to the creation of Viddy Studio, a place where that process helps others do the same.</p>
             </div>
             
       </div>
@@ -79,32 +83,43 @@ function App() {
         </div>
       </div>
       <div className="Pitch">
-        <div>Viddy Studio is more than a teleprompter. It’s your creative partner that helps you direct, and edit with intention. Whether you’re filming for yourself or for clients, Viddy gives you the structure to stay focused, perform confidently, and create videos that truly connect.</div>
+        <div>All of the fanciest edits and tactics won’t mean anything if you don’t capture a great story and delivery in the first place. Viddy Studio brings the message and story to the forefront of our process. </div>
         <h3>If you’re ready to stop dreaming and start building, try Viddy Studio.</h3>
       </div>
       <div className="Pricing"> 
         <h3>Pricing</h3>
+        <div className="PricingToggle">
+        Monthly
+      <div
+        className={`toggle-switch ${pricingBoolean ? 'on' : ''}`}
+        onClick={pricingToggle}
+      >
+        <div className="toggle-thumb" />
+      </div>
+      Yearly
+      </div>
         <div className="PricingCards">
           <div className="PriceCard">
-            <div className="PriceTitle">
+            <b className="PriceTitle">
               VIDDY CREATOR
-            </div>
-            <div className="Price">
+            </b>
+            <b className="Price">
               Free
-            </div>
+            </b>
             <div className="Features">
               <div><RxCheckCircled /> Unlimited Scripts</div>
               <div><RxCheckCircled /> 3 Videos Per Month</div>
+              <div><RxCheckCircled /> Discord Community</div>
             </div>
             <div className="PricingBtn">Get Started For Free</div>
           </div>
                     <div className="PriceCard PriceCard2">
-            <div className="PriceTitle">
+            <b className="PriceTitle">
               VIDDY PRO
-            </div>
-            <div className="Price">
-              $99 / Month
-            </div>
+            </b>
+            <b className="Price">
+              {pricingBoolean ? <>$600 / Year</> : <>$99 / Month</>}
+            </b>
             <div className="Features">
               <div><RxCheckCircled /> Unlimited Scripts</div>
               <div><RxCheckCircled /> Unlimited Videos</div>
@@ -113,12 +128,12 @@ function App() {
             <div className="PricingBtn">Get Started For Free</div>
           </div>
                     <div className="PriceCard">
-            <div className="PriceTitle">
+            <b className="PriceTitle">
               VIDDY TEAMS
-            </div>
-            <div className="Price">
+            </b>
+            <b className="Price">
               Custom
-            </div>
+            </b>
             <div className="Features">
               <div><RxCheckCircled /> Get in touch for your own use case</div>
               <div><RxCheckCircled /> Custom Solutions</div>

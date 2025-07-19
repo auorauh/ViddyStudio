@@ -50,6 +50,11 @@
     display: block;
   } */
 }
+@media (max-width: 599px) {
+  .sticky-scroll-container {
+  height: 100%;
+}
+}
 
 .sticky-scroll-spacer {
   height: 10px;
