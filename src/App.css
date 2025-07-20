@@ -72,7 +72,7 @@ a {
 }
 .Landing {
   width: 100%;
-  height: 70vh;
+  height: 70rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,12 +100,13 @@ h2{
   margin-top: 2rem;
 }
 .second {
-  height: 100vh;
+  height: 60rem;
   width: 100%;
-}
+  margin-bottom: 10rem;
+} 
 .videoContainer {
-  width: 70%;
-  height: 90%;
+  width: 80%;
+  height: inherit;
 }
 .About {
   font-size: 5rem;
@@ -115,7 +116,7 @@ h2{
   align-items: center;
   justify-self: center;
   width: 80%;
-  height: 100vh;
+  height: 80rem;
 }
 p {
   margin: 0;
@@ -143,7 +144,7 @@ p {
 }
 .HowSection {
   width: 100%;
-  height: 70vh;
+  height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,7 +198,7 @@ p {
   font-weight: bold;
 }
 .Testimonials {
-  height: 100vh;
+  height: 100rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -249,7 +250,7 @@ p {
   justify-content: center;
   align-items: center;
   color: white;
-  height: 80vh;
+  height: 80rem;
 }
 .Pricing h3 {
   justify-self: flex-start;
@@ -259,6 +260,7 @@ p {
 .PricingToggle {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 .toggle-switch {
   width: 50px;
@@ -429,6 +431,15 @@ p {
 }
 .TestColumn {
   width: 70%;
+}
+.Pricing {
+  height: 100%;
+}
+.Pricing h3 {
+  font-size: 5rem;
+}
+.PricingCards {
+  flex-direction: column;
 }
 }
 @media (max-width: 599px) {
