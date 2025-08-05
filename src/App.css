@@ -4,7 +4,13 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  
+}
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('./Assets/Fonts/BebasNeue-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 a {
   all: unset;
@@ -17,7 +23,9 @@ a {
   height: 100%;
   overflow-x: hidden;
   color: white;
-  letter-spacing: 0.05em;
+}
+.VeilGif {
+  width: 100vw;
 }
 .HeaderBlurWrapper {
   position: fixed;
@@ -81,10 +89,12 @@ a {
 h1{
   font-size: 8rem;
   margin: 0 15px;
+  font-size: 'BebasNeue';
 }
 h2{
   font-size: 3rem;
   margin: 0 10%;
+  font-size: 'BebasNeue';
 }
 .tryBtn {
   background-color: #fed232;

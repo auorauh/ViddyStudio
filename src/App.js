@@ -10,6 +10,7 @@ import testimonial1 from './Assets/testimonial1.png';
 import testimonial2 from './Assets/testimonial2.png';
 import testimonial3 from './Assets/testimonial3.png';
 import DarkVeil from './Componets/DarkVeil';
+import staticBG from './Assets/static.gif';
 
 function App() {
   const [pricingBoolean, setPricingBoolean] = useState(false);
@@ -28,7 +29,8 @@ function App() {
         <div class="glow-layer"></div>
       </div> */}
       <div className="Veil">
-        <DarkVeil/>
+        <img className="VeilGif" alt='scratched film background gif' src={staticBG}/>
+        {/* <DarkVeil/> */}
       </div>
       <div className="HeaderBlurWrapper">
         <div className="Header">
