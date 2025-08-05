@@ -55,7 +55,7 @@ function App() {
       </div>
       <div className="About" id="About">
             <b>You don't need a new camera.</b>
-            <p>You need a better process.</p>
+            <p>You need a better process!</p>
             <div className="AboutColumns">
               <p className="AboutCol"><b>Videograher</b><GiVideoCamera className="AboutIcon"/>Viddy pairs from your phone or computer wirelessly to any camera through a bell sound and replaces the need for a traditional teleprompter.</p>
               <p className="AboutCol"><b>Talent</b><BsPersonBoundingBox className="AboutIcon"/>Speak on camera with confidence and deliver your best takes. Viddy walks you through your script in bitesized sections allowing you to record as many takes as you need until you get it right.</p>
