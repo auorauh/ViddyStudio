@@ -154,7 +154,7 @@ function App() {
             <div className="Features">
               <div><RxCheckCircled /> Unlimited Scripts</div>
               <div><RxCheckCircled /> Unlimited Videos</div>
-              <div><RxCheckCircled /> 24/7 Customer Support</div>
+              <div><RxCheckCircled /> Premium Support</div>
             </div>
             <div className="PricingBtn">Get Started For Free</div>
           </div>
