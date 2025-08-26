@@ -108,8 +108,7 @@ function App() {
           <div className="TestColumn">
             <img alt="Testimonial User3" src={testimonial3} className="TestImg"/>
             <div className="TestName">JAKE LOVELAND</div>
-            <div className="TestTitle">CEO, Your Life Legacy</div>
-            <div >Papa Bird Studios</div>
+            <div className="TestTitle">Papa Bird Studios</div>
             <div>"It made things easier for all parties, and we were able to get through our scripted corporate videos in a fraction of the time! Essential, especially if you’re recording people who aren’t used to being in front of the camera.”</div>
           </div>
         </div>
@@ -150,7 +149,7 @@ function App() {
               VIDDY PRO
             </b>
             <b className="Price">
-              {pricingBoolean ? <>$600 / Year</> : <>$99 / Month</>}
+              {pricingBoolean ? <>$300 / Year</> : <>$29 / Month</>}
             </b>
             <div className="Features">
               <div><RxCheckCircled /> Unlimited Scripts</div>
