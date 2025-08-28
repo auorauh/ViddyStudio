@@ -16,7 +16,7 @@ root.render(
     <HashRouter>
       <div className="HeaderBlurWrapper">
         <div className="Header">
-          <img alt="Viddy Logo" className="Logo" src={whiteLogo} />
+          <HashLink to="/"><img alt="Viddy Logo" className="Logo" src={whiteLogo} /></HashLink>
           <div className="LeftHeader">
           <div className="HeaderLinks">
             <HashLink smooth to="/#About">ABOUT</HashLink>

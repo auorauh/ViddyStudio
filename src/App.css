@@ -578,11 +578,10 @@ p {
 .HowCards {
   width: 100%;
   flex-direction: row;
-  
+  margin-bottom:2rem;
 }
 .Arrows {
   display: flex;
-  margin-top:2rem;
   margin-bottom: 5rem;
 }
 .HowCard {
