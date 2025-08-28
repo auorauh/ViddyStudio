@@ -68,6 +68,7 @@ a {
   padding: .5rem;
   width: 10rem;
   font-size: 1.5rem;
+  text-align: center;
   border-radius: 15px;
 }
 .LandingContainer {
@@ -207,6 +208,14 @@ p {
 .HowTitle {
   font-size: 3rem;
   font-weight: bold;
+}
+.Arrows {
+  display: none;
+  color: white;
+  gap: 1rem;
+}
+.ArrowButton {
+  font-size: 10vw;
 }
 .Testimonials {
   height: 100rem;
@@ -353,8 +362,20 @@ p {
 }
 .FooterRight {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   padding-right: 2rem;
+}
+.FooterLeft {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.FooterIcons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.45vw;
 }
 
 .Veil {
@@ -420,6 +441,13 @@ p {
   flex-direction: column-reverse;
   margin: 10% 0;
 }
+.Arrows {
+  display: flex;
+  margin-bottom: 5rem;
+}
+.ArrowButton {
+  font-size: 8vw;
+}
 .LaptopImageContainer {
   height: 20rem;
   width: 100%;
@@ -428,7 +456,6 @@ p {
 .HowCards {
   width: 100%;
   flex-direction: row;
-  margin-bottom: 5rem;
 }
 .HowCard {
   width: 80%;
@@ -551,6 +578,10 @@ p {
 .HowCards {
   width: 100%;
   flex-direction: row;
+  
+}
+.Arrows {
+  display: flex;
   margin-bottom: 5rem;
 }
 .HowCard {
@@ -610,18 +641,33 @@ p {
   font-size: 8vw;
 }
 .Footer {
+  border-top: 1px solid white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 10rem;
   font-size: 1.25rem;
   margin: 0 1rem;
+}
+.FooterLeft {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.FooterIcons {
+  display: flex;
+  gap: 1rem;
+  font-size: 5vw;
 }
 .FooterRight {
   display: flex;
   gap: 2rem;
   font-size: .75rem;
   padding-right: 0rem;
+  flex-direction: column;
 }
 }
 

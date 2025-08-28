@@ -1,11 +1,19 @@
 import './App.css';
 import React, { useEffect,useState } from 'react';
+import { Link } from "react-router-dom";
 import whiteLogo from './Assets/Artboard 11_1.png';
 import { GiVideoCamera } from "react-icons/gi";
 import { BsPersonBoundingBox } from "react-icons/bs";
 import { FaComputer } from "react-icons/fa6";
 import { howItWorksData } from './Assets/howItWorks';
 import { RxCheckCircled } from "react-icons/rx";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleLeft } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa6";
 import testimonial1 from './Assets/testimonial1.png';
 import testimonial2 from './Assets/testimonial2.png';
 import testimonial3 from './Assets/testimonial3.png';
@@ -18,11 +26,21 @@ function App() {
 
   const pricingToggle = () => setPricingBoolean(prev => !prev);
   useEffect(() => {
-  const interval = setInterval(() => {
-    setActiveIndex((prev) => (prev + 1) % howItWorksData.length);
-  }, 4000);
-  return () => clearInterval(interval);
-}, []);
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % howItWorksData.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeIndex, howItWorksData.length]);
+
+    const handleNext = () => {
+      setActiveIndex((prev) => (prev + 1) % howItWorksData.length);
+    };
+
+    const handlePrev = () => {
+      setActiveIndex((prev) =>
+        prev === 0 ? howItWorksData.length - 1 : prev - 1
+      );
+    };
   return (
     <div className="App">
       {/* <div class="glow-background">
@@ -31,19 +49,6 @@ function App() {
       <div className="Veil">
         <img className="VeilGif" alt='scratched film background gif' src={staticBG}/>
         {/* <DarkVeil/> */}
-      </div>
-      <div className="HeaderBlurWrapper">
-        <div className="Header">
-          <img alt="Viddy Logo" className="Logo" src={whiteLogo} />
-          <div className="LeftHeader">
-          <div className="HeaderLinks">
-            <a href="#About">ABOUT</a>
-            <a href="#How">HOW IT WORKS</a>
-            <a href="#Pricing">PRICING</a>
-          </div>
-          <b className="AppBtn">Go To App</b>
-          </div>
-        </div>
       </div>
       <div className="LandingContainer">
         <div className="Landing">
@@ -66,6 +71,10 @@ function App() {
             
       </div>
       <div className="HowSection" id="How">
+                <div className="Arrows">
+                <div className="ArrowButton left" onClick={handlePrev}><FaArrowCircleLeft/></div>
+                <div className="ArrowButton right" onClick={handleNext}><FaArrowCircleRight/></div>
+              </div>
         <div className="HowCards">
           {howItWorksData.map((item, index) => (
             <div
@@ -174,10 +183,19 @@ function App() {
         </div>
       </div>
       <div className="Footer">
-        <div>Viddy Studio</div>
+        <div className="FooterLeft">
+          <img alt="Viddy Logo" className="Logo" src={whiteLogo} />
+          <div className="FooterIcons">
+            {/* <a href="" target="_blank" rel="noopener noreferrer"><FaXTwitter/></a> */}
+            <a href="https://www.youtube.com/@viddystudio" target="_blank" rel="noopener noreferrer"><FaYoutube/></a>
+            <a href="https://www.instagram.com/viddystudio/" target="_blank" rel="noopener noreferrer"><FaInstagram/></a>
+            <a href="https://www.linkedin.com/company/viddystudio" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>
+            <a href="https://www.facebook.com/p/Viddy-Studio-61556643364778/" target="_blank" rel="noopener noreferrer"><FaFacebook/></a>
+          </div>
+        </div>
         <div className="FooterRight">
-          <div>TERMS OF SERVICE</div>
-          <div>PRIVACY POLICY</div>
+          <Link to="/terms-of-service">TERMS OF SERVICE</Link>
+          <Link to="/privacy-policy">PRIVACY POLICY</Link>
         </div>
       </div>
     </div>
