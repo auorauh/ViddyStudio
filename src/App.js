@@ -53,16 +53,19 @@ function App() {
       <div className="LandingContainer">
         <div className="Landing">
           <h1>MAKE VIDEOS THAT MATTER</h1>
-          <h2>Content creation made simple and designed for small teams</h2>
-          <div className="tryBtn">Try For Free</div>
+          <h2>Video production made simple and designed for small teams</h2>
+          <div className="tryBtn">TRY FOR FREE</div>
         </div>
         <div className="second">
           <iframe className='videoContainer' src="https://www.youtube.com/embed/bJFOu1HCmho?si=WsXXAS_sE-UvojpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
       <div className="About" id="About">
-            <b>You don't need a new camera.</b>
-            <b>You need a better process.</b>
+            <div className="aboutsubTitle">
+              <b>You don't need a new camera.</b>
+              <b>You need a better process.</b>
+              </div>
+            <div className="AboutSubText">Viddy doesn't just help you but your whole video team.</div>
             <div className="AboutColumns">
               <p className="AboutCol"><b>Videographer</b><GiVideoCamera className="AboutIcon"/>Viddy pairs from your phone or computer wirelessly to any camera through a bell sound and replaces the need for a traditional teleprompter.</p>
               <p className="AboutCol"><b>Talent</b><BsPersonBoundingBox className="AboutIcon"/>Speak on camera with confidence and deliver your best takes. Viddy walks you through your script in bitesized sections allowing you to record as many takes as you need until you get it right.</p>
@@ -103,22 +106,28 @@ function App() {
         <div className="TestHeader">What Our Creators Say</div>
         <div className="TestColumns">
           <div className="TestColumn">
-            <img alt="Testimonial User1" src={testimonial1} className="TestImg"/>
-            <div className="TestName">TRENTON TEASDALE</div>
-            <div className="TestTitle">Content Creator</div>
+            {/* <div className="TestTitle">Content Creator</div> */}
             <div>"Viddy Studio has been such an amazing tool. From planning to shooting to editing. It allows me to focus on other creative aspects of my projects."</div>
+            <div className="TestBottom">
+              <div className="TestName">TRENTON TEASDALE</div>
+              <img alt="Testimonial User1" src={testimonial1} className="TestImg"/>
+            </div>
           </div>
           <div className="TestColumn">
-            <img alt="Testimonial User2" src={testimonial2} className="TestImg"/>
-            <div className="TestName">JAXON CUMMINGS</div>
-            <div className="TestTitle">CEO, Your Life Legacy</div>
+            {/* <div className="TestTitle">CEO, Your Life Legacy</div> */}
             <div>"I just made ads using Viddy Studio and it made everything so seamless and easy. I'm horrible on camera and they just made it seamless and so much better."</div>
+            <div className="TestBottom">
+              <div className="TestName">JAXON CUMMINGS</div>
+              <img alt="Testimonial User2" src={testimonial2} className="TestImg"/>
+            </div>
           </div>
           <div className="TestColumn">
-            <img alt="Testimonial User3" src={testimonial3} className="TestImg"/>
-            <div className="TestName">JAKE LOVELAND</div>
-            <div className="TestTitle">Papa Bird Studios</div>
+            {/* <div className="TestTitle">Papa Bird Studios</div> */}
             <div>"It made things easier for all parties, and we were able to get through our scripted corporate videos in a fraction of the time! Essential, especially if you’re recording people who aren’t used to being in front of the camera.”</div>
+            <div className="TestBottom">
+              <div className="TestName">JAKE LOVELAND</div>
+              <img alt="Testimonial User3" src={testimonial3} className="TestImg"/>
+            </div>
           </div>
         </div>
       </div>

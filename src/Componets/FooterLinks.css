@@ -14,7 +14,7 @@
 h1 {
     margin: 0;
 }
-h2 {
+.ItemTitle {
     font-size: 2rem;
     align-items: flex-start;
     margin: 0;

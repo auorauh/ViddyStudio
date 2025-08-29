@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './App.css';
 import App from './App';
+import Header from './Componets/Header';
 import PrivacyPolicy from './Componets/Privacy-Policy';
 import TOS from './Componets/TOS';
 import whiteLogo from './Assets/Artboard 11_1.png';
@@ -14,19 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter>
-      <div className="HeaderBlurWrapper">
-        <div className="Header">
-          <HashLink to="/"><img alt="Viddy Logo" className="Logo" src={whiteLogo} /></HashLink>
-          <div className="LeftHeader">
-          <div className="HeaderLinks">
-            <HashLink smooth to="/#About">ABOUT</HashLink>
-            <HashLink smooth to="/#How">HOW IT WORKS</HashLink>
-            <HashLink smooth to="/#Pricing">PRICING</HashLink>
-          </div>
-          <a className="AppBtn" href="https://app.viddystudio.com" target="_blank" rel="noopener noreferrer"><b>Go To App</b></a>
-          </div>
-        </div>
-      </div>
+      <Header />
       <Routes>
 
         <Route path="/" element={<App />}></Route>

@@ -7,7 +7,14 @@
 }
 @font-face {
   font-family: 'BebasNeue';
-  src: url('./Assets/Fonts/BebasNeue-Regular.ttf') format('ttf');
+  src: url('./Assets/Fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Andale';
+  src: url('./Assets/Fonts/ANDALEMO.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -17,7 +24,7 @@ a {
   cursor: pointer; /* optional: keeps it clickable */
 }
 .App {
-  font-family: 'HelveticaNowDisplay';
+  /* font-family: 'HelveticaNowDisplay'; */
   text-align: center;
   width: 100vw;
   height: 100%;
@@ -61,6 +68,7 @@ a {
   margin-right: 1rem;
   display: flex;
   align-items: center;
+  font-family: 'Andale';
 }
 .AppBtn {
   background-color: #fed232;
@@ -87,23 +95,26 @@ a {
   justify-content: center;
   align-items: center;
 }
-h1{
-  font-size: 6vw;
+h1 { 
+  font-size: 8vw;
   margin: 0 15px;
-  font-size: 'BebasNeue';
+  font-family: 'BebasNeue';
+   letter-spacing: 15px;
 }
-h2{
+h2 {
   font-size: 2vw;
   margin: 0 10%;
-  font-size: 'BebasNeue';
+  font-family: 'Andale';
 }
 .tryBtn {
   background-color: #fed232;
   width: 15rem;
   height: 4rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
   border-radius: 25px;
   color: black;
+  font-family: 'BebasNeue';
   font-weight: 900;
   display: flex;
   justify-content: center;
@@ -132,6 +143,15 @@ h2{
 }
 p {
   margin: 0;
+}
+.aboutsubTitle {
+  font-size: 6vw;
+  font-family: 'BebasNeue';
+
+}
+.AboutSubText {
+  font-size: 2vw;
+  font-family: 'Andale';
 }
 .AboutColumns {
   display: flex;
@@ -227,30 +247,50 @@ p {
   
 }
 .TestHeader {
-  font-size: 4vw;
+  font-size: 8vw;
   font-weight: 900;
   margin-bottom: 8rem;
+  letter-spacing: 4px;
+  font-family: 'BebasNeue';
 }
 .TestColumns {
   display: flex;
+  height: 20rem;
   justify-content: center;
   font-size: 1.35vw;
   gap: 5rem;
+  padding: 0 5rem;
 }
 .TestColumn {
-  width: 22%;
+  font-family: 'Andale';
+  width: 33%;
   text-align: center;
-  background-color: rgba(15, 15, 15, 0.5);
+  background-color: rgba(30, 30, 30, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 25px;
-  padding: 3rem;
+  height: 100%;
+  padding: 2rem;
+}
+.TestBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  align-self: flex-end;
+  
 }
 .TestImg {
-  height: 12vw;
+  margin-left: 2rem;
+  height: 3vw;
   width: auto;
 }
 .TestName {
-  font-size: 2vw;
+  font-size: 1.25vw;
   font-weight: 900;
+  font-family: 'BebasNeue';
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 .TestTitle {
   font-size: 1.5vw;
@@ -262,7 +302,14 @@ p {
   align-items: center;
   align-content: center;
   padding: 0 5%;
-  font-size: 2.25vw;
+  font-size: 2vw;
+  font-family: 'Andale';
+  
+}
+.Pitch h3 {
+  font-family: 'BebasNeue';
+  font-size: 2.75vw;
+  letter-spacing: 5px;
 }
 .Pricing {
   display: flex;
@@ -271,6 +318,7 @@ p {
   align-items: center;
   color: white;
   height: 70rem;
+
 }
 .Pricing h3 {
   justify-self: flex-start;
@@ -408,6 +456,29 @@ p {
   animation: floatGlow 12s ease-in-out infinite alternate;
   transform-origin: center;
 }
+.MenuIcon {
+  font-size: 3.5rem;
+  z-index: 100;
+}
+.MenuOverlay {
+  position: absolute;
+  background-color: rgb(0, 0, 0, .9);
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10rem;
+}
+.MenuItem {
+  color: white;
+  font-family: monospace;
+  font-size: 3rem;
+}
 
 @keyframes floatGlow {
   0% { transform: translate(-10%, 5%) scale(1); }
@@ -517,6 +588,10 @@ p {
   .LeftHeader {
     margin: 0;
   }
+  .MenuIcon {
+    font-size: 2.5rem;
+    padding-right: 1rem;
+  }
   .AppBtn {
     padding: .5rem;
     width: 7rem;
@@ -527,11 +602,22 @@ p {
     height: 3rem;
   }
     h1 {
-    font-size: 3.25rem;
-    margin: 0 1%;
+    font-size: 4.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 0%;
+    padding: 0;
+  
   }
   h2 {
     font-size: 1.5rem;
+  }
+  
+  .Landing h2 {
+    font-size: 1rem;
+    width: 60%;
+    align-self: flex-start;
+    text-align: start;
   }
   .Landing {
     height: 40rem;
@@ -542,15 +628,27 @@ p {
     justify-content: center;
     align-items: center;
     margin-bottom: 8rem;
+    
   }
   .videoContainer {
     height: 70%;
     width: 90%;
+    
   }
   .About {
     height: 100%;
     width: 100%;
     font-size: 1.8rem;
+  }
+  .AboutSubText {
+    font-size: 4vw;
+  }
+  .aboutsubTitle {
+    text-align: start;
+    font-size: 10vw;
+    letter-spacing: 3px;
+    width: 100%;
+    padding-left: 4rem;
   }
   .AboutColumns {
   flex-direction: column;
@@ -602,6 +700,7 @@ p {
 }
 .TestColumns {
   flex-direction: column;
+  height:unset;
   padding: 0 2rem;
   gap: 2rem;
 }
@@ -611,10 +710,10 @@ p {
   font-size: 1rem;
 }
 .TestImg {
-  height: 10rem;
+  height: 2rem;
 }
 .TestName {
-  font-size: 2rem;
+  font-size: .76rem;
 }
 .TestTitle {
   font-size: 1.5rem;
@@ -622,7 +721,10 @@ p {
 .Pitch{
   height: 100%;
   margin: 10% 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+.Pitch h3 {
+  font-size: 1.5rem;
 }
 .Pricing {
   height: 100%;
