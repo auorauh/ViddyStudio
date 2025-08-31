@@ -673,6 +673,9 @@ p {
   width: 100%;
   margin: 0;
 }
+.LaptopImage {
+  height: 17rem;
+}
 .HowCards {
   width: 100%;
   flex-direction: row;
