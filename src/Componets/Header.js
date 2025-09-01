@@ -1,6 +1,6 @@
 import React,{ useState } from "react";
 import { HashLink } from 'react-router-hash-link';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { TiThMenu } from "react-icons/ti";
 import whiteLogo from '../Assets/Artboard 11_1.png';
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,7 @@ export default function Header() {
             <HashLink smooth to="/#How">HOW IT WORKS</HashLink>
             <HashLink smooth to="/#Pricing">PRICING</HashLink>
           </div>
-          <GiHamburgerMenu className="MenuIcon" onClick={showMenuFunc}/>
+          <TiThMenu className="MenuIcon" onClick={showMenuFunc}/>
           </div>
         </div>
         {showMenu && (
