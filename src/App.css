@@ -793,7 +793,7 @@ p {
   flex-direction: column;
 }
 .MenuOverlay {
-  gap: 5rem;
+  gap: 2rem;
 }
 }
 

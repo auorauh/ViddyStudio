@@ -24,7 +24,7 @@ export default function Header() {
         </div>
         {showMenu && (
             <div className="MenuOverlay">
-            <Link className="MenuItem" to="https://viddystudio.com">Home</Link>
+            <Link className="MenuItem" to="https://viddy-studio.vercel.app/">Home</Link>
             <div className="MenuItem">CREATORS</div>
             <div className="MenuItem">TEAMS</div>
             <div className="MenuItem">COMMUNITY</div>
