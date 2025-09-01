@@ -684,6 +684,7 @@ p {
   margin: 20% 0;
 }
 .LaptopImageContainer {
+  height: 50rem;
   width: 100%;
   margin: 0;
 }
