@@ -684,7 +684,7 @@ p {
   margin: 20% 0;
 }
 .LaptopImageContainer {
-  height: 50rem;
+  /* height: 50rem; */
   width: 100%;
   margin: 0;
 }
@@ -694,6 +694,7 @@ p {
 .HowCards {
   width: 100%;
   flex-direction: row;
+  margin-top: 16rem;
   
 }
 .Arrows {
