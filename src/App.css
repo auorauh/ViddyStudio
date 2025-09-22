@@ -341,7 +341,7 @@ p {
   transform: translateY(60px);
 }
 .PitchImg {
-  height: 50vh;
+  width: 50vh;
 }
 .Pitch h3 {
   font-family: 'BebasNeue';
@@ -349,7 +349,7 @@ p {
   letter-spacing: 5px;
 }
 .PitchMsg {
-  width: 30%;
+  width: 40%;
   font-size: 3vh;
 }
 .Pricing {
