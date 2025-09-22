@@ -95,22 +95,27 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 h1 { 
   font-size: 8vw;
   margin: 0 15px;
   font-family: 'BebasNeue';
    letter-spacing: 15px;
+   transform: translateY(150px);
 }
 h2 {
   font-size: 2vw;
   margin: 0 10%;
   font-family: 'Andale';
 }
+.laningImg {
+  height: 50vw;
+}
 .tryBtn {
   background-color: #fed232;
   width: 15rem;
-  height: 4rem;
+  height: 5rem;
   font-size: 2rem;
   letter-spacing: 2px;
   border-radius: 25px;
@@ -139,37 +144,51 @@ h2 {
   justify-content: center;
   align-items: center;
   justify-self: center;
-  width: 80%;
+  width: 100%;
   height: 80rem;
 }
 p {
   margin: 0;
 }
+.aboutImg {
+  width: 25vw;
+}
 .aboutsubTitle {
   font-size: 6vw;
   font-family: 'BebasNeue';
+  width: 80%;
 
 }
 .AboutSubText {
-  font-size: 2vw;
+  font-size: 1.75vw;
   font-family: 'Andale';
+  text-align: start;
+  padding: 2rem;
+  width: 80%;
 }
 .AboutColumns {
   display: flex;
   flex-direction: row;
-  font-size: 1.5vw;
-  margin-top: 10rem;
+  font-size: 1.25vw;
+  margin: 5rem 0;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  width: 90%;
 }
 .AboutCol {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: start;
   width: 30%;
   height: 80%;
   padding: 5rem 0;
   font-family: 'Andale';
+}
+.AboutCol b {
+  font-size: 3vh;
+  padding-bottom: 1rem;
 }
 .AboutIcon {
   font-size: 8rem;
@@ -182,6 +201,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 .LaptopImageContainer {
   position: relative;
@@ -230,6 +250,11 @@ p {
 .HowTitle {
   font-size: 3rem;
   font-weight: bold;
+  font-family: 'BebasNeue';
+  letter-spacing: 2px;
+}
+.HowSubTitle {
+    font-family: 'Andale';
 }
 .Arrows {
   display: none;
@@ -299,19 +324,33 @@ p {
 }
 .Pitch {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   align-content: center;
   padding: 0 5%;
   font-size: 2vw;
   font-family: 'Andale';
-  
+  gap: 5rem;
+}
+.PitchTitle {
+  font-family: 'BebasNeue';
+  font-size: 2.75vw;
+  letter-spacing: 5px;
+  text-align: start;
+  transform: translateY(60px);
+}
+.PitchImg {
+  height: 50vh;
 }
 .Pitch h3 {
   font-family: 'BebasNeue';
   font-size: 2.75vw;
   letter-spacing: 5px;
+}
+.PitchMsg {
+  width: 30%;
+  font-size: 3vh;
 }
 .Pricing {
   display: flex;
@@ -326,6 +365,7 @@ p {
   justify-self: flex-start;
   font-size: 8vw;
   margin: 2rem;
+  font-family: 'BebasNeue';
 }
 .PricingToggle {
   display: flex;
@@ -380,10 +420,12 @@ p {
 }
 .PriceTitle {
   align-self: flex-start;
+  font-family: 'Andale';
 }
 .Price {
   align-self: flex-start;
   font-size: 2vw;
+  font-family: 'BebasNeue';
 }
 .Features {
   display: flex;
@@ -392,6 +434,7 @@ p {
   gap: 2rem;
   font-size: 1.2rem;
   width: 100%;
+  font-family: 'Andale';
 }
 .PricingBtn {
   background-color: black;
@@ -480,6 +523,7 @@ p {
   color: white;
   font-family: monospace;
   font-size: 3rem;
+  font-family: 'BebasNeue';
 }
 
 @keyframes floatGlow {
@@ -507,7 +551,18 @@ p {
     height: unset;
   }
   .AboutColumns {
-    font-size: 2.5vw;
+  flex-direction: column;
+  font-size: 1.5vw;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  }
+  .aboutImg {
+    width: 90vw;
+  }
+  .AboutCol {
+    width: 100%;
   }
   .HowSection {
   height: 100%;
@@ -539,7 +594,7 @@ p {
   display: block;
 }
 .Testimonials {
-  height: 100%;
+  height: 100rem;
   margin-bottom: 20%;
 }
 .TestHeader {
@@ -552,6 +607,7 @@ p {
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  height: unset;
 }
 .TestColumn {
   width: 70%;
@@ -567,6 +623,10 @@ p {
 }
 .Pitch {
   font-size: 4vw;
+  flex-direction: column;
+}
+.PitchMsg {
+  width: 100%;
 }
 .Pricing {
   height: 100%;
@@ -586,6 +646,7 @@ p {
   .Header {
     width: 100%;
     height: 4rem;
+    
   }
   .HeaderLinks {
     display: none;
@@ -612,24 +673,26 @@ p {
     letter-spacing: 3px;
     margin: 0%;
     padding: 0;
-  
+    transform: translateY(50px);
   }
   h2 {
     font-size: 1.5rem;
   }
-  
   .Landing h2 {
     font-size: 1rem;
-    width: 60%;
+    width: 75%;
     align-self: flex-start;
     text-align: start;
-    
   }
   .Landing h1 {
     line-height: 60px;
   }
   .Landing {
     height: 40rem;
+    margin-bottom: 0;
+  }
+  .tryBtn {
+    height: 3rem;
   }
   .second {
     height: 40vh;
@@ -659,6 +722,9 @@ p {
     width: 100%;
     padding-left: 4rem;
     line-height: 35px;
+  }
+    .aboutImg {
+    width: 90vw;
   }
   .AboutColumns {
   flex-direction: column;
@@ -741,6 +807,21 @@ p {
   height: 100%;
   margin: 10% 0;
   font-size: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.PitchTitle {
+  font-size: 4vh;
+  margin: 0;
+  transform: translateY(45px);
+}
+.PitchImg {
+  height: 28vh;
+}
+.PitchMsg {
+  width: 100%;
+  font-size: 2vh;
+  text-align: start;
 }
 .Pitch h3 {
   font-size: 1.5rem;
@@ -793,7 +874,7 @@ p {
   flex-direction: column;
 }
 .MenuOverlay {
-  gap: 2rem;
+  gap: 3.25rem;
 }
 }
 
