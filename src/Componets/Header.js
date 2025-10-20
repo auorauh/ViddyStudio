@@ -25,8 +25,8 @@ export default function Header() {
         {showMenu && (
             <div className="MenuOverlay">
             <Link className="MenuItem" to="/">Home</Link>
-            <div className="MenuItem">CREATORS</div>
-            <div className="MenuItem">TEAMS</div>
+            <div className="MenuItem">CREATORS <p className="MenuSubText">(coming soon)</p></div>
+            <div className="MenuItem">TEAMS <p className="MenuSubText">(coming soon)</p></div>
             <div className="MenuItem">COMMUNITY</div>
             <a
                 className="AppBtn"
