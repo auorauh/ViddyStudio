@@ -20,7 +20,7 @@ import testimonial3 from './Assets/testimonial3.png';
 import editor from './Assets/editor.jpg';
 import director from './Assets/director.jpg';
 import talent from './Assets/cameraTalent.png';
-import landing from './Assets/landing.PNG';
+import landing from './Assets/landing.png';
 import pitch from './Assets/pitch.jpg';
 import staticBG from './Assets/static.gif';
 
