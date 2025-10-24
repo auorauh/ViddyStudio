@@ -81,7 +81,7 @@ a {
   border-radius: 15px;
 }
 .LandingContainer {
-  padding-top: 5rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +90,7 @@ a {
 }
 .Landing {
   width: 100%;
-  height: 64rem;
+  height: 70rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -539,6 +539,7 @@ p {
   align-items: center;
   gap: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  margin: 2rem 0;
 }
 
 .email-input {
@@ -696,6 +697,11 @@ p {
 }
 .MenuOverlay {
   gap: 5rem;
+}
+.email-box {
+    margin-bottom: 0rem;
+  margin-top: 2rem;
+  font-size: large;
 }
 }
 @media (max-width: 599px) {
@@ -932,6 +938,11 @@ p {
 }
 .MenuOverlay {
   gap: 3.25rem;
+}
+.email-box {
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+  font-size: large;
 }
 }
 
