@@ -27,6 +27,8 @@ import staticBG from './Assets/static.gif';
 function App() {
   const [pricingBoolean, setPricingBoolean] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+    const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const pricingToggle = () => setPricingBoolean(prev => !prev);
   useEffect(() => {
@@ -45,6 +47,26 @@ function App() {
         prev === 0 ? howItWorksData.length - 1 : prev - 1
       );
     };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("entry.1830464977", email); // 👈 your correct entry ID
+
+    fetch(
+      "https://docs.google.com/forms/d/e/1FAIpQLSeBogBPj2oUbfaxLmEW9dKOU3gU42vvrDT8cxudSTItSVs6dg/formResponse",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      }
+    )
+      .then(() => setSubmitted(true))
+      .catch((err) => console.error("Error submitting form", err));
+
+    setEmail("");
+  };
+
   return (
     <div className="App">
       {/* <div class="glow-background">
@@ -59,7 +81,24 @@ function App() {
           <h1>MAKE VIDEOS THAT MATTER</h1>
           <img src={landing} className="laningImg" />
           <h2>Speaking on camera made easy. Optimize your small team's production process creating high quality videos at scale.</h2>
-          <div className="tryBtn">TRY FOR FREE</div>
+          <div className="tryBtn">
+            
+        <form onSubmit={handleSubmit} className="email-box">
+          Request Early Access
+          <div>
+          <input
+            className="email-input"
+            type="email"
+            name="entry.183046977"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <button type="submit" className="email-btn">Submit</button>
+          </div>
+        </form>
+          </div>
         </div>
         <div className="second">
           <iframe className='videoContainer' src="https://www.youtube.com/embed/bJFOu1HCmho?si=WsXXAS_sE-UvojpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
