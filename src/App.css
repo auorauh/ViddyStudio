@@ -571,6 +571,7 @@ p {
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 1rem;
 }
 
 .email-btn:hover {
