@@ -228,7 +228,7 @@ function App() {
               VIDDY PRO
             </b>
             <b className="Price">
-              {pricingBoolean ? <>$300 / Year</> : <>$29 / Month</>}
+              {pricingBoolean ? <>$199 / Year</> : <>$20 / Month</>}
             </b>
             <div className="Features">
               <div><RxCheckCircled /> Unlimited Scripts</div>
